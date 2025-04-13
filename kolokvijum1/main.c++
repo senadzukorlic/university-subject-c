@@ -45,20 +45,46 @@
 // return 0;
 // }
 
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int n,koraci,ostatak;
+//     cout << "Unesite koordinate kuce";
+//     cin >> n;
+
+//     koraci=n / 5;
+//     ostatak=n % 5;
+//     if (ostatak>0){
+//        koraci ++; 
+//     }
+
+//     cout << "Broj koraka do kuce je: " << koraci << endl;
+//     return 0;
+// }
+
 #include <iostream>
 using namespace std;
 
 int main(){
-    int n,koraci,ostatak;
-    cout << "Unesite koordinate kuce";
-    cin >> n;
+    int k,n,v;
 
-    koraci=n / 5;
-    ostatak=n % 5;
-    if (ostatak>0){
-       koraci ++; 
+    cout << "Unesite cenu prve banane,finansijksa srdestva kojima raspolazete i zeljeni broj banana: ";
+    cin >> k >> n >> v;
+
+    int cena = 0;
+    
+    for (int i=1;i<=v;++i){
+        cena += k*i;
     }
 
-    cout << "Broj koraka do kuce je: " << koraci << endl;
+    int ostatak = cena - n;
+
+    if (ostatak <= 0) {
+        cout << "0";
+    } else {
+    cout << ostatak;
+    }
+
     return 0;
 }
