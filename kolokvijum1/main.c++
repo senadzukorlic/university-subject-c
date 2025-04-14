@@ -66,25 +66,51 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int k,n,v;
+// int main(){
+//     int k,n,v;
 
-    cout << "Unesite cenu prve banane,finansijksa srdestva kojima raspolazete i zeljeni broj banana: ";
-    cin >> k >> n >> v;
+//     cout << "Unesite cenu prve banane,finansijksa srdestva kojima raspolazete i zeljeni broj banana: ";
+//     cin >> k >> n >> v;
 
-    int cena = 0;
+//     int cena = 0;
     
-    for (int i=1;i<=v;++i){
-        cena += k*i;
-    }
+//     for (int i=1;i<=v;++i){
+//         cena += k*i;
+//     }
 
-    int ostatak = cena - n;
+//     int ostatak = cena - n;
 
-    if (ostatak <= 0) {
-        cout << "0";
-    } else {
-    cout << ostatak;
-    }
+//     if (ostatak <= 0) {
+//         cout << "0";
+//     } else {
+//     cout << ostatak;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
+// int main (){
+//     int n;
+//     int x,y,z;
+//     int xSum=0,ySum=0,zSum=0;
+//     cout << "Unesite broj";
+//     cin >> n;
+
+//     for (int i=0;i<n;i++){
+//         cout << "Unesite x,y,z koordinate: ";
+//         cin >> x>>y>>z;
+//         xSum += x;
+//         ySum += y;
+//         zSum += z;
+       
+//     }
+
+    
+  
+//     if (xSum==0 && ySum==0 && zSum==0){
+//         cout << "Da";
+//     } else {
+//         cout << "Ne";
+//     }
+//     return 0;
+// }
