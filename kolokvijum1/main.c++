@@ -133,23 +133,39 @@ using namespace std;
 // return 0;
 // }
 
-int main(){
-    int n;
-    cout << "Unesite broj stanica: ";
-    cin >> n;
-    int trenutno =0;
-    int maxKapacitet=0;
-    cout << "Unesite broj putnika koji su izasli i koji su usli na trenutnoj stanici: ";
-    for (int i=0;i<n;i++){
-        int izasli,usli;
-        cin >> izasli >> usli;
-        trenutno -= izasli;
-        trenutno += usli;
-        if (trenutno > maxKapacitet){
-            maxKapacitet = trenutno;
-        }
-    }
-    cout << "Minimalni kapacitet tramvaja mora biti: " << maxKapacitet << endl;
+// int main(){
+//     int n;
+//     cout << "Unesite broj stanica: ";
+//     cin >> n;
+//     int trenutno =0;
+//     int maxKapacitet=0;
+//     cout << "Unesite broj putnika koji su izasli i koji su usli na trenutnoj stanici: ";
+//     for (int i=0;i<n;i++){
+//         int izasli,usli;
+//         cin >> izasli >> usli;
+//         trenutno -= izasli;
+//         trenutno += usli;
+//         if (trenutno > maxKapacitet){
+//             maxKapacitet = trenutno;
+//         }
+//     }
+//     cout << "Minimalni kapacitet tramvaja mora biti: " << maxKapacitet << endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
+// int main(){
+//     int h,n,ai,suma=0;
+//     cout << "Unesite duzinu ograde i broj ljudi: ";
+//     cin >> h >> n;
+
+//     cout << "Unesite visinu prijatelja u razmaku od 1-2: ";
+//     for (int i=0;i<n;i++){
+//         cin >> ai;
+//         if (ai >h){
+//             suma += 2;
+//         } else {
+//             suma += 1;
+//         }
+//     }
+// }
