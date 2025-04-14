@@ -115,20 +115,41 @@ using namespace std;
 //     return 0;
 // }
 
-int main(){
-    int n, k;
-cout << "Unesite broj za umanjivanje: ";
-cin >> n;
-cout << "Unesite koliko puta ce se umanjiti broj: ";
-cin >> k;
+// int main(){
+//     int n, k;
+// cout << "Unesite broj za umanjivanje: ";
+// cin >> n;
+// cout << "Unesite koliko puta ce se umanjiti broj: ";
+// cin >> k;
 
-for (int i = 0; i < k; i++) {
-    if (n % 10 != 0) {
-        n -= 1;
-    } else {
-        n /= 10;
+// for (int i = 0; i < k; i++) {
+//     if (n % 10 != 0) {
+//         n -= 1;
+//     } else {
+//         n /= 10;
+//     }
+// }
+// cout << "Rezultat je: " << n << endl;
+// return 0;
+// }
+
+int main(){
+    int n;
+    cout << "Unesite broj stanica: ";
+    cin >> n;
+    int trenutno =0;
+    int maxKapacitet=0;
+    cout << "Unesite broj putnika koji su izasli i koji su usli na trenutnoj stanici: ";
+    for (int i=0;i<n;i++){
+        int izasli,usli;
+        cin >> izasli >> usli;
+        trenutno -= izasli;
+        trenutno += usli;
+        if (trenutno > maxKapacitet){
+            maxKapacitet = trenutno;
+        }
     }
-}
-cout << "Rezultat je: " << n << endl;
-return 0;
+    cout << "Minimalni kapacitet tramvaja mora biti: " << maxKapacitet << endl;
+
+    return 0;
 }
