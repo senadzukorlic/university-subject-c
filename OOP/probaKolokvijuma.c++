@@ -1,19 +1,53 @@
 #include <iostream>
 class Radnik
 {
-public:
+private:
+    int  plata;
     char Ime[50];
-    int  staz;
-    void ispisiIme() const
+
+public:
+    void setIme(const char i[50])
     {
-        std::cout << "Ime radnika: " << Ime << std::endl;
-    }
+        for (int j = 0; j < 50; j++)
+        {
+            Ime[j] = i[j];
+        }
+    };
+    const char* getIme() const
+    {
+        return Ime;
+    };
+    void set_plata(int p);
+    int  getPlata() const;
 };
 
-Radnik Nemanja = {"Nemanja", 5};
-
+void Radnik::set_plata(int p)
+{
+    plata = p;
+}
+int Radnik::getPlata() const
+{
+    return plata;
+}
 int main()
 {
-    Nemanja.ispisiIme();
+    Radnik Broj1;
+    Broj1.setIme("Izet");
+    Broj1.set_plata(50000);
+    Radnik Broj2;
+    Broj2.set_plata(60000);
+    Broj2.setIme("Muhammed");
+    Radnik Broj3, Broj4;
+    Broj3.setIme("Adnan");
+    Broj3.set_plata(70000);
+    Broj4.setIme("Hasan");
+    Broj4.set_plata(80000);
+
+    for (int i = 1; i < 2; i++)
+    {
+        std::cout << " Ime : " << Broj1.getIme() << " ,"
+                  << " Plata : " << Broj1.getPlata() << " eura." << std::endl;
+    }
+
     return 0;
 }
