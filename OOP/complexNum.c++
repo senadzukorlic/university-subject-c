@@ -7,11 +7,7 @@ private:
     float real, imagin;
 
 public:
-    Complex(float r = 0, float i = 0)
-    {
-        real   = r;
-        imagin = i;
-    }
+    Complex(float r = 0, float i = 0) : real(r), imagin(i) {}
 
     Complex saberi(const Complex& y)
     {
